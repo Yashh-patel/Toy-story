@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+<h1>
+	
+		Story maker 
+		
+</h1>
+<div>
+<p class="intro">
+	Welcome to the story maker! This is a simple web application that allows you to create your own story.
+</p>
+</div>
+<div class="container">
+	<!-- Each button corresponds to a different part of the story -->
+	<button id="tittle-btn" class="btn-1">1</button>
+	<!-- Button for Noun -->
+	<button id="action-btn" class="btn-2">2</button>
+	<!-- Button for Verb -->
+	<button id="reaction-btn" class="btn-3">3</button>
+	<!-- Button for Adjective -->
+	<button id="animal-btn" class="btn-4">4</button>
+	<!-- Button for second Noun -->
+	<button id="place-btn" class="btn-5">5</button>
+	<!-- Button for Place -->
+  </div>
+  <div>
+	<div class="subContainer">
+	  <button id="speak-btn" class="btn-6">Speak</button>
+	  <!-- Speak button to read the story aloud -->
+	  <button id="reset-btn" class="btn-6">Reset</button>
+	  <!-- Reset button to clear the current story -->
+	  <button id="random-story-btn" class="btn-6">Random Story</button>
+	  <!-- Button to generate a random story -->
+	</div>
+	<div id="btn-result" >
+		<p>Noun: <span id="noun-value"></span></p>
+		<p>Verb: <span id="verb-value"></span></p>
+		<p>Adjective: <span id="adjective-value"></span></p>
+		<p>Noun 2: <span id="noun2-value"></span></p>
+		<p>Place: <span id="place-value"></span></p>
+	  </div>
+  </div>
+      <!-- Output area where the generated story will be displayed -->
+	  <div id="story-output"></div>
+	  <!-- Output area where the speech status will be shown -->
+	  <div id="speak-status"></div>
+	  <!-- Output area where the reset status will be shown -->
+	  <div id="reset-status"></div>
+	<script src="js/app.js"></script>
+</body>
+</html>
