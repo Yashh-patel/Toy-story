@@ -36,27 +36,59 @@ function getRandomWord(array) {
 		synth.speak(utterThis);
 	}
 }
-document.getElementById('tittle-btn').addEventListener('click', function() {
+
+function generateRandomStory() {
+    let story = ''; // Initialize the story string
+
+    for (let i = 0; i < 5; i++) {
+        // Create a simple sentence structure for each iteration
+        story += `${getRandomWord(tittle)} ${getRandomWord(action)} ${getRandomWord(reaction)} ${getRandomWord(animal)} ${getRandomWord(place)}. `;
+    }
+
+    return story.trim(); 
+}
+document.querySelector('#tittle-btn').addEventListener('click', function() {
     const noun = getRandomWord(tittle);
     nounValue.textContent = noun;
     textToSpeak += noun + " ";
 });
-document.getElementById('action-btn').addEventListener('click', function() {
-    const noun = getRandomWord(action);
-    nounValue.textContent = noun;
-    textToSpeak += noun + " ";
-});document.getElementById('tittle-btn').addEventListener('click', function() {
-    const noun = getRandomWord(reaction);
-    nounValue.textContent = noun;
-    textToSpeak += noun + " ";
-});document.getElementById('tittle-btn').addEventListener('click', function() {
-    const noun = getRandomWord(animal);
-    nounValue.textContent = noun;
-    textToSpeak += noun + " ";
-});document.getElementById('tittle-btn').addEventListener('click', function() {
-    const noun = getRandomWord(place);
-    nounValue.textContent = noun;
-    textToSpeak += noun + " ";
+document.querySelector('#action-btn').addEventListener('click', function() {
+    const verb = getRandomWord(action);
+    verbValue.textContent = verb;
+    textToSpeak += verb + " ";
+});
+document.querySelector('#reaction-btn').addEventListener('click', function() {
+    const adjec = getRandomWord(reaction);
+    adjectiveValue .textContent = adjec;
+    textToSpeak += adjective + " ";
+});
+document.querySelector('#animal-btn').addEventListener('click', function() {
+    const Animal = getRandomWord(animal);
+    noun2Value .textContent = Animal;
+    textToSpeak += animal + " ";
 });
 
+document.querySelector('#place-btn').addEventListener('click', function() {
+    const noun = getRandomWord(place);
+    placeValue .textContent = noun;
+    textToSpeak += place + " ";
+});
 
+document.querySelector('#reset-btn').addEventListener('click',function(){
+	textToSpeak='';
+	nounValue.textContent='';
+    verbValue.textContent='';
+    adjectiveValue.textContent='';
+    noun2Value.textContent='';
+    placeValue.textContent='';
+    speakStatusresult.textContent="";
+
+    resetStatus_result.textContent="system has reset succesfully";
+})
+
+document.querySelector('#speak-btn').addEventListener('click', function() {
+
+   speakNow(textToSpeak);
+    speakStatusresult.textContent="Speaking🎤✨";
+
+})
