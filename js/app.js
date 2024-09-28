@@ -92,3 +92,8 @@ document.querySelector('#speak-btn').addEventListener('click', function() {
     speakStatusresult.textContent="Speaking🎤✨";
 
 })
+
+document.querySelector('#story_result').addEventListener('click', function() {
+
+    
+})
