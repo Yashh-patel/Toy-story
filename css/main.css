@@ -105,7 +105,42 @@ padding: 10px;
     justify-content: center;
     align-items: center;
 }
-#story-output{
+#button_result{
+    display: flex;
+    gap: 20px;
+    border: #000000 1px solid;
+    align-items:start;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-around;
+    
+}
+#noun-value{
+    font-size: 20px;
+    border-bottom: #000000 1px solid;
+    font-style: italic;
+}
+#verb-value{
+    font-size: 20px;
+    border-bottom: #000000 1px solid;
+    font-style: italic;
+}
+#adjective-value{
+    font-size: 20px;
+    border-bottom: #000000 1px solid;
+    font-style: italic;
+}
+#noun2-value{
+    font-size: 20px;
+    border-bottom: #000000 1px solid;
+    font-style: italic;
+}
+#place-value{
+    font-size: 20px;
+    border-bottom: #000000 1px solid;
+    font-style: italic;
+}
+#story_result{
 height: 120px;
 width: 250px;
 border: 1px solid black;
