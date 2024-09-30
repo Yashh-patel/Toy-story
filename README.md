@@ -30,7 +30,7 @@
 - Include user input fields for custom story elements.
 
 ## Demo
-Check out the live demo [here](#).
+Check out the live demo [here](#https://yashh-patel.github.io/Toy-story/).
 
 ## License
 This project is licensed under the MIT License.
