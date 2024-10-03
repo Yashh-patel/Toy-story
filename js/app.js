@@ -4,7 +4,7 @@ const action = ['sat on', 'ate', 'danced with', 'saw', 'kissed'];
 const reaction = ['a funny', 'a scary', 'a goofy', 'a barking', 'a fat'];
 const animal = ['goat', 'monkey', 'fish', 'cow', 'bug'];
 const place = ['on the moon', 'on the chair', 'on the grass', 'in my shoes', 'in my soup'];
-let textToSpeak = ''; // let is used here because this value will be updated
+let textToSpeak = ''; // i have used let inorder to upadte this value.
 const story_result = document.getElementById('story_result');
 
 const speakStatusresult = document.getElementById('speak-status');
