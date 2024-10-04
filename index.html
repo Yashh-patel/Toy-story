@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Story Maker</title>
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/main.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Maker</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
 </head>
 
 <body>
-<h1>
-	
-		Story maker 
-		
-</h1>
-<div>
-<p class="intro">
-	Welcome to the story maker! This is a simple web application that allows you to create your own story.
-</p>
-</div>
-<div class="container">
-	
-	<button id="tittle-btn" class="btn-1">1</button>
-	
-	<button id="action-btn" class="btn-2">2</button>
+    <h1>Story Maker</h1>
+    <div>
+        <p class="intro">Welcome to the story maker! This is a simple web application that allows you to create your own story.</p>
+    </div>
+    <div class="container">
+        <button id="tittle-btn" class="btn-1">1</button>
+        <button id="action-btn" class="btn-2">2</button>
+        <button id="reaction-btn" class="btn-3">3</button>
+        <button id="animal-btn" class="btn-4">4</button>
+        <button id="place-btn" class="btn-5">5</button>
+    </div>
+    <div>
+        <div class="subContainer">
+            <button id="speak-btn" class="btn-6">Speak</button>
+            <button id="reset-btn" class="btn-6">Reset</button>
+            <button id="random-story-btn" class="btn-6">Random Story</button>
+        </div>
+        <div id="button_result">
+            <p>Noun: <span id="noun-value"></span></p>
+            <p>Verb: <span id="verb-value"></span></p>
+            <p>Adjective: <span id="adjective-value"></span></p>
+            <p>Noun 2: <span id="noun2-value"></span></p>
+            <p>Place: <span id="place-value"></span></p>
+        </div>
+        <div class="output-container">
+            <div id="story_result"></div>
+            <div id="speak-status"></div>
+            <div id="reset-status"></div>
+        </div>
+    </div>
 
-	<button id="reaction-btn" class="btn-3">3</button>
-	
-	<button id="animal-btn" class="btn-4">4</button>
-	
-	<button id="place-btn" class="btn-5">5</button>
-	
-  </div>
-  <div>
-	<div class="subContainer">
-	  <button id="speak-btn" class="btn-6">Speak</button>
-	  
-	  <button id="reset-btn" class="btn-6">Reset</button>
-	
-	  <button id="random-story-btn" class="btn-6">Random Story</button>
-	  
-	</div>
-	<div id="button_result" >
-		<p>Noun: <span id="noun-value"></span></p>
-		<p>Verb: <span id="verb-value"></span></p>
-		<p>Adjective: <span id="adjective-value"></span></p>
-		<p>Noun 2: <span id="noun2-value"></span></p>
-		<p>Place: <span id="place-value"></span></p>
-	  </div>
-	  <div class="output-container">
-	  
-	    <div id="story_result" style=""></div>
-	  <div id="speak-status"></div>
+    <!-- Feedback and Rating Section -->
+    <div class="feedback-container">
+        <h2>Rate  Story that we created for you</h2>
+        <div class="rating">
+            <label>
+                <input type="radio" name="rating" value="1"> 1
+            </label>
+            <label>
+                <input type="radio" name="rating" value="2"> 2
+            </label>
+            <label>
+                <input type="radio" name="rating" value="3"> 3
+            </label>
+            <label>
+                <input type="radio" name="rating" value="4"> 4
+            </label>
+            <label>
+                <input type="radio" name="rating" value="5"> 5
+            </label>
+        </div>
+        <h3>Additional Feedback</h3>
+        <textarea id="user-feedback" placeholder="Share your thoughts..."></textarea>
+        <button id="submit-feedback-btn">Submit Feedback</button>
+        <div class="feedback-list">
+            <h2>Previous Feedback</h2>
+            <ul id="feedback-output"></ul>
+        </div>
+    </div>
 
-	  <div id="reset-status" ></div>
-	  </div>
-	
-  </div>
-    
-	<script src="js/app.js"> document.addEventListener('DOMContentLoaded', function () {
-		// Your JavaScript code here
-	});
-	
-	</script>
+    <script src="js/app.js"></script>
 </body>
 </html>
