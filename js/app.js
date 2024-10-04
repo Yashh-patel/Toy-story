@@ -1,4 +1,4 @@
-    // Arrays of words
+// Arrays of words
 const tittle = ['The turkey', 'Mom', 'Dad', 'The Dog', 'My Teacher'];
 const action = ['sat on', 'ate', 'danced with', 'saw', 'kissed'];
 const reaction = ['a funny', 'a scary', 'a goofy', 'a barking', 'a fat'];
@@ -104,39 +104,14 @@ document.getElementById('submit-feedback-btn').addEventListener('click', functio
 
     if (rating) {
         const ratingValue = rating.value;
-        storeFeedback(ratingValue, feedback);
+        // Remove this line to avoid storing feedback
+        // storeFeedback(ratingValue, feedback);
         alert("Thank you for your feedback!");
 
         // Reset feedback form
         document.querySelectorAll('input[name="rating"]').forEach(input => input.checked = false);
         document.getElementById('user-feedback').value = '';
-
-        displayFeedback();  // Update the feedback display
     } else {
         alert("Please select a rating before submitting.");
     }
 });
-
-// Store feedback in local storage
-function storeFeedback(rating, feedback) {
-    let feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
-    feedbackList.push({ rating, feedback });
-    localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
-}
-
-// Display previous feedback
-function displayFeedback() {
-    const feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
-    const feedbackOutput = document.getElementById('feedback-output');
-
-    feedbackOutput.innerHTML = ''; // Clear previous feedback
-
-    feedbackList.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `Rating: ${item.rating}, Feedback: ${item.feedback}`;
-        feedbackOutput.appendChild(li);
-    });
-}
-
-// Call this function to display feedback on page load
-displayFeedback();
